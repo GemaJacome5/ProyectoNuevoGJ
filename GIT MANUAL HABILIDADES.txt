@@ -1,0 +1,164 @@
+video (https://www.youtube.com/watch?v=VdGzPZ31ts8)
+git --version (Da la version y confirmamos si esta bien istalado) 
+(configuracion 
+git config --global user.name "Oswaldo Mendoza"
+git config --global user.email "oswaldo.1979@icloud.com"
+git config --global core.editor "code -code --wait" (Configura editor visual code como editor por defecto)
+git config --global -e (Ver el archivo de configuración Global)
+-----------core.autocrlf----------------
+(carriage Return-Line Fine) True en window imput en Mac y linux
+git config --global core.autocrlf true 
+----Si deseas mayor configuracion-------
+git config -h
+--ls presenta todas las carpetas y archivos----------
+ls
+--- ls -a muestra los archivos o directorios oculto .........
+ls -a 
+----pwd da la ruta donde te encuentras-------------------------
+pwd
+-------------------------------------------
+--cd nos permite mover entre las carpetas-----------
+cd (nombre de la carpeta sin parentesis)
+Tabien puedes utilizar cd mas la inicial + la tecla (tab) completara el nombre de la carpeta
+cd .. 
+cd (punto punto) Retrocede en la gerarquia de la ruta
+----mkdir crea carpeta-----------------
+mkdir (nombre de la carpeta sin parentesis)
+--git init incializa un proyecto --------------
+git init
+(Para confimar si esta creado ejecutamos ls -a para que se muestre los directorios y archivos ocultos)
+-----------------------------
+---clear limpia la pantalla----
+clear
+---------
+-----------Flujo de trabajo ------------------
+Computador  |    stage   |   Commit   | Server
+ Agregar    |git add xxx |git commit  |git push 
+ Modificar  |git add xxx |git commit  |git push         | 
+ Eliminar   |git add xxx |git commit  |git push 
+-------------------------------------------------
+----------------------------------------------------------------------
+----code . incializa un visual code------
+cod .
+------------------------------------------------------------------------
+---git status lo que hace es mostrarnos el estado actural de nuestro repositorio --------------
+git status
+-----Status mas corto Reporta el estado de los archivos--------------------------------- 
+-----git status -s----
+-----------------------------------------------------------------------
+----add Selecionar un archivio que deseomo pasar a stage----
+git add (nombre del archivo mas una extensión sin parentesis)
+git add Archivo1.txt Archivo2.txt
+!!!Agrega mas de un archivo
+---git add . Seleciona todos los archivos---- 
+git add .
+!!!!!Comentario:git . es una mala practica puede agregar archivos que no convienen cargar en le repositorio 
+------------------------------------------------------------
+-----git commit compromete a manterner el cambio en de los archivos agregados------
+git commit -m "Tiempo 1"
+--git commit --Si tenemos configurado visual studio code
+git commit 
+!! se abrira visual estudio code agregamos un mesaje gurdamos y cerramos 
+----------------------
+---%rm mas nombre de archivo y su extension borra archivo
+rm (nombre del archivo sin parentesis)
+----------------------------------
+%Para retornar staged
+git retore --staged (nombre del archvio sin parentesis)
+-----------Renombrar un archivo------------
+mv Archivo1.txt Arc1.txt
+$ mv Archivo1.txt Arch.txt
+----------------------
+Una forma mas abreviado utilizar git status
+git status -s
+---------------
+Para ver la diferencia entre archvios-Para salir presionar la letra Q
+git diff
+---Antes de pasara al esenario (staged)----
+git diff --staged
+-------------------
+Revisa el historial de nuestro repostitorio 
+git log 
+tambien puedes revisar con 
+git log --oneline
+---------------
+git branch
+---------
+git checkout -b
+-----------
+git checkout -b rama
+-----------------
+--Presenta el contenido que tiene el archivo-- 
+cat (nombre de archivo sin parentesis)
+-----------------------------------------------------------------------
+---Para trabajar en el respositorio de githut---
+--Primero--
+git remote add origin https://github.com/osvinfor/PRACTICA1.git
+---Segundo---
+  "si pide contraceña ver "https://www.youtube.com/watch?v=VdGzPZ31ts8"
+-----------------------------------------------------------------------
+----Para sacar algun cambio del estado que realizado y pasado a la etapa de staged se utiliza git restore
+git restore --staged Archivo1.txt
+git restore --staged (nombre del archivo con extensión sin parentesis)
+---Para volver el cambio que quitamos de la etapa staged y devolverlos a staged---
+git restore archivo1.txt
+-----------------------------------------------------------------------
+----mv mover archivos---
+mv archivo1.txt archivo2.txt
+----renombra los archivos pero git no los tomas encuenta---------------
+git mv archvivo1.txt archivo2.txt 
+-----------------------------------------------------------------------
+--------------giingnore------------------------------------------------ 
+creamos un archivo .env con los siguientes datos:
+	password=123456
+	user=nicolas
+	nod_modules/
+creamos un archivo gitignore
+	.env
+	nod_modules/
+git add .gitignore
+--------------------------------------------------------------------------
+-----Status mas corto Reporta el estado de los archivos--------------------------------- 
+-----git status -s----
+--------------------------------------------------------------------------
+---da la diferencia de los contendios entre un tiempo anterior y el actual---
+git diff
+---git mas el nombre del archivo muestsra la diferencia de contenidos-----
+git diff (nombres del archivo sin parentesis)
+---Git diff mas --stanged se puede ver las partes del contenido que estan staged-----
+--------------------------------------------------------------------------
+----- git log presenta todos los tiempos que regitrado por un commit
+git log
+--git log --oneline es un forma corta de ver los tiempos registrado por u commit---
+git commit --oneline
+para salir se presiona la letra Q
+---------------------------------------------------------------------------
+-----------------------------------
+…or create a new repository on the command line
+echo "# PRACTICA1" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/osvinfor/PRACTICA1.git
+git push -u origin main
+-----------------------------
+…or push an existing repository from the command line
+git remote add origin https://github.com/osvinfor/PRACTICA1.git
+git branch -M main
+git push -u origin main
+----------------------
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+--------------------------
+
+
+
+
+
+
+ 
+
+
+
+
